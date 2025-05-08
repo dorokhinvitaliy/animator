@@ -1,0 +1,65 @@
+.inputBox {
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #dadada61;
+    border-radius: .7rem;
+    transition: all .3s ease;
+    height: 60px!IMPORTANT;
+    justify-content: center;
+}
+
+.active {
+    box-shadow: inset 0 0 0px 2px rgb(255, 128, 0)
+}
+
+.selectBox_options {
+    height: 0%;
+    margin-top: .5rem;
+    background-color: #dadada61;
+    border-radius: .7rem;
+}
+
+.selectBox_option {
+    width: 100%;
+    padding: 1rem;
+}
+
+
+.inputBoxLabel {
+    user-select: none;
+    display: block;
+    font-size: .7rem;
+    color: darkgray;
+    transition: all .3s ease;
+}
+
+.inputBoxField {
+    height: 24px;
+    margin: 0;
+    display: block;
+    outline: none!important;
+    border: none;
+    background: none;
+    transition: height .3s ease;
+}
+
+.empty:not(.active) .inputBoxField {
+    height: 0;
+}
+
+.empty:not(.active) .inputBoxLabel {
+    font-size: 1rem;
+}
+
+/* 
+
+SWITCH BOX
+
+*/
+
+.selectBox.active + .selectBox_options {
+    height: 100%;
+}
+

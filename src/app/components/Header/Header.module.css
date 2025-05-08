@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    border-radius: 0rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    color: #fff;
+    background-color: rgb(108, 34, 177);
+    transition: all 1s ease;
+}
+
+.active {
+    top: .5rem; 
+    left: 1.5rem;
+    right: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    background-color: rgba(137, 43, 226, 0.053);
+    color: rgb(108, 34, 177);
+    backdrop-filter: blur(20px);
+}
+
+.headerGroup {
+    display: flex;
+}
+
+.headerSpan {
+    cursor: pointer;
+    display: block;
+    padding: 1.5rem .5rem;
+    transition: background-color 1s ease, color 1s ease, padding 1s ease;
+}
+
+.headerSpan:hover {
+    background-color: rgba(255, 255, 255, 0.085);
+}
+
+.header.active .headerSpan {
+    padding: .5rem .5rem;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.headerGroup > .headerSpan:not(:last-child) {
+    margin-right: .5rem;
+}
